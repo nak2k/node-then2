@@ -33,8 +33,8 @@ function foo(callback) {
   async1(then(
     result1 =>
       async2(then(
-        result2 => {
-        },
+        result2 =>
+          callback(null, result1, result2),
         callback
       )),
     callback
